@@ -185,7 +185,7 @@ impl SparseMerkleTree {
             };
             current = hash_concat(&left, &right);
         }
-        &current == &self.root()
+        current == self.root()
     }
 
     /// Verify a membership proof using only the raw value.
